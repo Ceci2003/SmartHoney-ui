@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications Preview - SmartHoney</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="notifications" class="app-wrapper">
+  <!-- Sidebar -->
+  <aside class="app-sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
+    </a>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="dashboard.html" data-page="dashboard">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link" href="apiaries.html" data-page="apiaries">
+        <i class="bi bi-house-door"></i>
+        <span>Apiaries</span>
+      </a>
+      <a class="nav-link" href="devices-grid.html" data-page="devices">
+        <i class="bi bi-device-hdd"></i>
+        <span>Devices</span>
+      </a>
+      <a class="nav-link active" href="notifications-preview.html" data-page="notifications">
+        <i class="bi bi-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <div class="nav-divider"></div>
+      <a class="nav-link" href="settings.html" data-page="settings">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+      <a class="nav-link" href="#" data-page="help">
+        <i class="bi bi-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="app-topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav aria-label="breadcrumb" class="breadcrumbs-container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Notifications</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <!-- Notifications Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-link position-relative" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+          <i class="bi bi-bell fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+            3
+          </span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end topbar-notifications" aria-labelledby="notificationsDropdown">
+          <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <h6 class="mb-0">Notifications</h6>
+            <a href="notifications-preview.html" class="text-decoration-none small">View all</a>
+          </div>
+          <div class="topbar-notifications-list">
+            <a href="notifications-preview.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-danger"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Device Offline</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-05: No data received for 2 hours</p>
+                  <small class="text-muted">1 hour ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications-preview.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-warning"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Temperature Alert</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-01: Temperature above threshold</p>
+                  <small class="text-muted">2 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications-preview.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-warning"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Humidity Alert</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-03: Humidity below normal range</p>
+                  <small class="text-muted">3 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications-preview.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-info"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Data Received</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">All devices reporting normally</p>
+                  <small class="text-muted">2 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications-preview.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-success"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Device Reconnected</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-04: Successfully reconnected</p>
+                  <small class="text-muted">1 day ago</small>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Empty State (commented out - swap in when no notifications) -->
+          <!--
+          <div class="text-center py-4">
+            <i class="bi bi-bell-slash text-muted" style="font-size: 2rem; opacity: 0.5;"></i>
+            <p class="text-muted small mb-0 mt-2">No notifications yet</p>
+          </div>
+          -->
+          <div class="border-top p-2">
+            <a href="notifications-preview.html" class="btn btn-primary btn-sm w-100">Open Notifications</a>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.875rem;">
+            JD
+          </div>
+          <span class="d-none d-md-inline">John Doe</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Notifications</h1>
+        <p class="page-subtitle">Preview and prioritize alerts</p>
+      </div>
+      <div class="page-actions">
+        <a href="settings.html" class="btn btn-link text-decoration-none">Settings</a>
+        <button class="btn btn-outline-secondary">Mark all as read</button>
+        <a href="notifications.html" class="btn btn-primary">Open all</a>
+      </div>
+    </div>
+
+    <!-- Row A: Summary Stat Cards -->
+    <div class="row mb-4">
+      <div class="col-md-3 mb-3">
+        <div class="stat-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="stat-value">12</p>
+              <p class="stat-label">Unread</p>
+            </div>
+            <div class="stat-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="stat-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="stat-value">3</p>
+              <p class="stat-label">Critical</p>
+            </div>
+            <div class="stat-icon">
+              <i class="bi bi-exclamation-triangle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="stat-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="stat-value">5</p>
+              <p class="stat-label">Warnings</p>
+            </div>
+            <div class="stat-icon">
+              <i class="bi bi-exclamation-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="stat-card h-100">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <p class="stat-value">8</p>
+              <p class="stat-label">Info</p>
+            </div>
+            <div class="stat-icon">
+              <i class="bi bi-info-circle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row B: Filters Bar -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row g-3 align-items-end">
+          <div class="col-md-6">
+            <label for="notificationSearch" class="form-label small">Search</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" id="notificationSearch" placeholder="Search notifications...">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small">Filters</label>
+            <div class="d-flex flex-wrap gap-2 filter-chips">
+              <button class="btn btn-sm btn-outline-primary active">Unread</button>
+              <button class="btn btn-sm btn-outline-danger">Critical</button>
+              <button class="btn btn-sm btn-outline-warning">Warning</button>
+              <button class="btn btn-sm btn-outline-info">Info</button>
+              <button class="btn btn-sm btn-outline-secondary">Last 24h</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row C: Two-Column Main Preview -->
+    <div class="row mb-4">
+      <!-- Left Column: Needs Attention -->
+      <div class="col-lg-7 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="mb-0">Needs Attention</h5>
+          </div>
+          <div class="card-body">
+            <div class="notification-preview-list">
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-danger"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Device Offline</strong>
+                        <p class="mb-1 text-muted small">Hive-05: No data received for 2 hours</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-05</small>
+                      </div>
+                      <small class="text-muted">1 hour ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-danger"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Critical Temperature</strong>
+                        <p class="mb-1 text-muted small">Hive-06: Temperature critical at 38.2°C</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-06</small>
+                      </div>
+                      <small class="text-muted">2 hours ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-warning"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Temperature Alert</strong>
+                        <p class="mb-1 text-muted small">Hive-01: Temperature above threshold (35.1°C)</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-01</small>
+                      </div>
+                      <small class="text-muted">2 hours ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-warning"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Humidity Alert</strong>
+                        <p class="mb-1 text-muted small">Hive-03: Humidity below normal range (62%)</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-03</small>
+                      </div>
+                      <small class="text-muted">3 hours ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-warning"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Weight Anomaly</strong>
+                        <p class="mb-1 text-muted small">Hive-02: Unexpected weight change detected</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-02</small>
+                      </div>
+                      <small class="text-muted">4 hours ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="notification-preview-item">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="notification-dot bg-warning"></div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                      <div>
+                        <strong class="d-block">Low Battery</strong>
+                        <p class="mb-1 text-muted small">Hive-04: Device battery below 20%</p>
+                        <small class="text-muted"><i class="bi bi-device-hdd me-1"></i>Hive-04</small>
+                      </div>
+                      <small class="text-muted">5 hours ago</small>
+                    </div>
+                    <a href="device-details.html" class="btn btn-sm btn-link p-0 text-decoration-none">View device →</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- Empty State (commented out - swap in when no notifications) -->
+            <!--
+            <div class="text-center py-5">
+              <i class="bi bi-check-circle text-success" style="font-size: 3rem; opacity: 0.5;"></i>
+              <h5 class="mt-3">All Clear</h5>
+              <p class="text-muted">No notifications requiring attention at this time.</p>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: By Device -->
+      <div class="col-lg-5 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h5 class="mb-0">By Device</h5>
+          </div>
+          <div class="card-body">
+            <div class="list-group list-group-flush">
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-05</strong>
+                    <p class="mb-0 text-muted small">East Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-danger">1</span>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-06</strong>
+                    <p class="mb-0 text-muted small">West Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-danger">1</span>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-01</strong>
+                    <p class="mb-0 text-muted small">North Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-warning">1</span>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-03</strong>
+                    <p class="mb-0 text-muted small">South Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-warning">1</span>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-02</strong>
+                    <p class="mb-0 text-muted small">North Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-warning">1</span>
+                  </div>
+                </div>
+              </a>
+              <a href="device-details.html" class="list-group-item list-group-item-action">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <strong>Hive-04</strong>
+                    <p class="mb-0 text-muted small">South Apiary</p>
+                  </div>
+                  <div class="d-flex gap-1">
+                    <span class="badge bg-warning">1</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row D: Recent Activity Table -->
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-0">Recent Activity</h5>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Severity</th>
+                <th>Device</th>
+                <th>Message</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1 hour ago</td>
+                <td><span class="badge bg-danger">Critical</span></td>
+                <td>Hive-05</td>
+                <td>Device offline - No data received</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>2 hours ago</td>
+                <td><span class="badge bg-danger">Critical</span></td>
+                <td>Hive-06</td>
+                <td>Temperature critical at 38.2°C</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>2 hours ago</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>Hive-01</td>
+                <td>Temperature above threshold</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>3 hours ago</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>Hive-03</td>
+                <td>Humidity below normal range</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>4 hours ago</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>Hive-02</td>
+                <td>Unexpected weight change detected</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>5 hours ago</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>Hive-04</td>
+                <td>Device battery below 20%</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">Open</a></td>
+              </tr>
+              <tr>
+                <td>6 hours ago</td>
+                <td><span class="badge bg-info">Info</span></td>
+                <td>Hive-01</td>
+                <td>Data received successfully</td>
+                <td><a href="notifications.html" class="btn btn-sm btn-outline-secondary">View</a></td>
+              </tr>
+              <tr>
+                <td>1 day ago</td>
+                <td><span class="badge bg-success">Success</span></td>
+                <td>Hive-04</td>
+                <td>Device reconnected successfully</td>
+                <td><a href="notifications.html" class="btn btn-sm btn-outline-secondary">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
+
