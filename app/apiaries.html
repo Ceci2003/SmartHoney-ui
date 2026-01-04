@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apiaries - SmartHoney</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="apiaries" class="app-wrapper">
+  <!-- Sidebar -->
+  <aside class="app-sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
+      <span>SmartHoney</span>
+    </a>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="dashboard.html" data-page="dashboard">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link active" href="apiaries.html" data-page="apiaries">
+        <i class="bi bi-house-door"></i>
+        <span>Apiaries</span>
+      </a>
+      <a class="nav-link" href="devices-grid.html" data-page="devices">
+        <i class="bi bi-device-hdd"></i>
+        <span>Devices</span>
+      </a>
+      <a class="nav-link" href="notifications.html" data-page="notifications">
+        <i class="bi bi-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <div class="nav-divider"></div>
+      <a class="nav-link" href="settings.html" data-page="settings">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+      <a class="nav-link" href="#" data-page="help">
+        <i class="bi bi-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="app-topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav aria-label="breadcrumb" class="breadcrumbs-container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Apiaries</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-link position-relative" type="button" aria-label="Notifications">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+          3
+        </span>
+      </button>
+      <div class="dropdown">
+        <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.875rem;">
+            JD
+          </div>
+          <span class="d-none d-md-inline">John Doe</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Apiaries</h1>
+        <p class="page-subtitle">Manage your apiary locations</p>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn-primary">
+          <i class="bi bi-plus-circle me-2"></i>Add Apiary
+        </button>
+      </div>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search apiaries...">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>All Status</option>
+              <option>Active</option>
+              <option>Inactive</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>Sort by Name</option>
+              <option>Sort by Date</option>
+              <option>Sort by Devices</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apiaries List -->
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">North Apiary</h5>
+            <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>123 Farm Road, County</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">8 Devices</span>
+              <span class="badge bg-success">Active</span>
+            </div>
+            <p class="card-text small text-muted">Established: January 2024</p>
+            <a href="apiary-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">South Apiary</h5>
+            <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>456 Orchard Lane, County</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">6 Devices</span>
+              <span class="badge bg-success">Active</span>
+            </div>
+            <p class="card-text small text-muted">Established: March 2024</p>
+            <a href="apiary-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">East Apiary</h5>
+            <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>789 Meadow Street, County</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">5 Devices</span>
+              <span class="badge bg-success">Active</span>
+            </div>
+            <p class="card-text small text-muted">Established: May 2024</p>
+            <a href="apiary-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">West Apiary</h5>
+            <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>321 Valley Road, County</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">3 Devices</span>
+              <span class="badge bg-success">Active</span>
+            </div>
+            <p class="card-text small text-muted">Established: July 2024</p>
+            <a href="apiary-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Central Apiary</h5>
+            <p class="text-muted small mb-2"><i class="bi bi-geo-alt me-1"></i>654 Main Street, County</p>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary">2 Devices</span>
+              <span class="badge bg-secondary">Inactive</span>
+            </div>
+            <p class="card-text small text-muted">Established: September 2024</p>
+            <a href="apiary-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
+

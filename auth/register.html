@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - SmartHoney</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/public.css">
+  <style>
+    .auth-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--sh-primary) 0%, var(--sh-secondary) 100%);
+    }
+    .auth-container {
+      background-color: var(--sh-surface);
+      border-radius: var(--sh-radius);
+      box-shadow: var(--sh-shadow-lg);
+      overflow: hidden;
+    }
+    .auth-illustration {
+      background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(139, 69, 19, 0.1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      min-height: 500px;
+    }
+    .auth-illustration-content {
+      text-align: center;
+      color: var(--sh-text);
+    }
+    .auth-illustration-content i {
+      font-size: 8rem;
+      color: var(--sh-primary);
+      opacity: 0.3;
+      margin-bottom: 2rem;
+    }
+    .auth-form-container {
+      padding: 3rem;
+    }
+    @media (max-width: 768px) {
+      .auth-illustration {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="auth-container">
+            <div class="row g-0">
+              <div class="col-lg-6 d-none d-lg-block">
+                <div class="auth-illustration">
+                  <div class="auth-illustration-content">
+                    <i class="bi bi-person-plus"></i>
+                    <h3>Join SmartHoney</h3>
+                    <p class="text-muted">Create your account and start monitoring your hives</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="auth-form-container">
+                  <div class="text-center mb-4">
+                    <a href="../public/index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none">
+                      <img src="../assets/img/logo.svg" alt="SmartHoney Logo" width="32" height="32">
+                      <span class="fw-bold fs-4">SmartHoney</span>
+                    </a>
+                  </div>
+                  <h2 class="mb-1">Create Account</h2>
+                  <p class="text-muted mb-4">Sign up to get started with SmartHoney</p>
+                  
+                  <form>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                      <div class="form-text">Must be at least 8 characters long</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirmPassword" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="mb-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="acceptTerms" required>
+                        <label class="form-check-label" for="acceptTerms">
+                          I agree to the <a href="../public/terms.html" target="_blank" class="text-decoration-none">Terms of Service</a> and <a href="../public/privacy.html" target="_blank" class="text-decoration-none">Privacy Policy</a>
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Create Account</button>
+                    <div class="text-center">
+                      <p class="mb-0">Already have an account? <a href="login.html" class="text-decoration-none">Sign in</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+/* SmartHoney Theme Variables */
+:root {
+  /* Primary Colors */
+  --sh-primary: #FFA500;
+  --sh-secondary: #8B4513;
+  --sh-accent: #FFD700;
+  
+  /* Background & Surface */
+  --sh-bg: #F8F9FA;
+  --sh-surface: #FFFFFF;
+  --sh-text: #212529;
+  --sh-muted: #6C757D;
+  
+  /* Borders & Effects */
+  --sh-border: #DEE2E6;
+  --sh-radius: 0.5rem;
+  --sh-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --sh-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  
+  /* Status Colors */
+  --sh-status-ok: #28A745;
+  --sh-status-warn: #FFC107;
+  --sh-status-crit: #DC3545;
+  --sh-status-off: #6C757D;
+  --sh-status-unknown: #ADB5BD;
+  
+  /* Sidebar */
+  --sh-sidebar-width: 260px;
+  --sh-sidebar-bg: #FFFFFF;
+  --sh-sidebar-text: #212529;
+  --sh-sidebar-active: #FFF5E6;
+  
+  /* Topbar */
+  --sh-topbar-height: 64px;
+  --sh-topbar-bg: #FFFFFF;
+  
+  /* Spacing */
+  --sh-spacing-xs: 0.25rem;
+  --sh-spacing-sm: 0.5rem;
+  --sh-spacing-md: 1rem;
+  --sh-spacing-lg: 1.5rem;
+  --sh-spacing-xl: 2rem;
+}
+
+/* Dark mode support (optional, for future use) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Uncomment and adjust for dark mode if needed */
+    /* --sh-bg: #1A1A1A;
+    --sh-surface: #2D2D2D;
+    --sh-text: #FFFFFF;
+    --sh-muted: #ADB5BD;
+    --sh-border: #404040; */
+  }
+}
+

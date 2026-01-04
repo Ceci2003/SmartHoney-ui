@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHoney - Advanced Beekeeping Monitoring</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/public.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg public-navbar transparent">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
+        SmartHoney
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#how-it-works">How it works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="../auth/login.html" class="btn btn-outline-primary">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1>Monitor Your Hives with Smart Technology</h1>
+          <p class="lead">Real-time data, intelligent alerts, and comprehensive analytics to keep your apiary thriving.</p>
+          <div>
+            <a href="#contact" class="btn btn-light btn-lg">Request Demo</a>
+            <a href="#how-it-works" class="btn btn-outline-light btn-lg">See How it Works</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="chart-placeholder" style="min-height: 400px; margin-top: 2rem;">
+            <i class="bi bi-graph-up-arrow"></i>
+            <p>Interactive Dashboard Preview</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Icons -->
+  <section class="trust-icons">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto trust-item">
+          <i class="bi bi-shield-check fs-4"></i>
+          <span>Secure & Reliable</span>
+        </div>
+        <div class="col-auto trust-item">
+          <i class="bi bi-award fs-4"></i>
+          <span>Industry Leading</span>
+        </div>
+        <div class="col-auto trust-item">
+          <i class="bi bi-people fs-4"></i>
+          <span>Trusted by 1000+ Beekeepers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -> Solution -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">The Challenge</h2>
+          <p class="text-muted">Modern beekeeping faces unique challenges</p>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-exclamation-triangle"></i>
+            </div>
+            <h4>Unpredictable Health Issues</h4>
+            <p>Detecting problems early is critical, but manual checks are time-consuming and often miss early warning signs.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h4>Time-Consuming Monitoring</h4>
+            <p>Regular hive inspections require significant time and effort, making it difficult to scale your operation.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+            <h4>Limited Data Insights</h4>
+            <p>Without comprehensive data, it's hard to optimize hive conditions and improve productivity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">The Solution</h2>
+          <p class="text-muted">SmartHoney provides intelligent monitoring and insights</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: #E8F5E9; color: #28A745;">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <h4>Real-Time Health Monitoring</h4>
+            <p>Continuous monitoring of temperature, humidity, and hive activity with instant alerts for anomalies.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: #E8F5E9; color: #28A745;">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <h4>Automated Insights</h4>
+            <p>AI-powered analytics help you make data-driven decisions and optimize hive conditions automatically.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: #E8F5E9; color: #28A745;">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <h4>Comprehensive Analytics</h4>
+            <p>Track trends, compare performance across hives, and generate reports to improve your apiary management.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">How It Works</h2>
+          <p class="text-muted">Get started in three simple steps</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="text-center">
+            <div class="feature-icon mx-auto mb-3" style="width: 80px; height: 80px;">
+              <span style="font-size: 2.5rem; font-weight: 700;">1</span>
+            </div>
+            <h4>Install Devices</h4>
+            <p>Place SmartHoney monitoring devices in your hives. Setup takes just minutes with our intuitive mobile app.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="text-center">
+            <div class="feature-icon mx-auto mb-3" style="width: 80px; height: 80px;">
+              <span style="font-size: 2.5rem; font-weight: 700;">2</span>
+            </div>
+            <h4>Monitor & Analyze</h4>
+            <p>Access real-time data and insights through our web dashboard or mobile app, anytime, anywhere.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="text-center">
+            <div class="feature-icon mx-auto mb-3" style="width: 80px; height: 80px;">
+              <span style="font-size: 2.5rem; font-weight: 700;">3</span>
+            </div>
+            <h4>Optimize & Grow</h4>
+            <p>Use data-driven insights to improve hive health, increase productivity, and scale your operation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Why Choose SmartHoney</h2>
+          <p class="text-muted">Comprehensive benefits for modern beekeepers</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="d-flex gap-3">
+            <div class="flex-shrink-0">
+              <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+            </div>
+            <div>
+              <h5>24/7 Monitoring</h5>
+              <p class="text-muted">Never miss a critical event with continuous monitoring and instant alerts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="d-flex gap-3">
+            <div class="flex-shrink-0">
+              <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+            </div>
+            <div>
+              <h5>Easy to Use</h5>
+              <p class="text-muted">Intuitive interface designed for beekeepers of all technical levels.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="d-flex gap-3">
+            <div class="flex-shrink-0">
+              <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+            </div>
+            <div>
+              <h5>Scalable Solution</h5>
+              <p class="text-muted">From hobbyist to commercial operations, scale as you grow.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="d-flex gap-3">
+            <div class="flex-shrink-0">
+              <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+            </div>
+            <div>
+              <h5>Expert Support</h5>
+              <p class="text-muted">Dedicated support team to help you succeed with your apiary.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Grid -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Powerful Features</h2>
+          <p class="text-muted">Everything you need to manage your apiary</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+            <h5>Temperature & Humidity</h5>
+            <p>Monitor critical environmental conditions in real-time.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-soundwave"></i>
+            </div>
+            <h5>Hive Activity Monitoring</h5>
+            <p>Track bee activity patterns and detect anomalies.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-bell-fill"></i>
+            </div>
+            <h5>Smart Alerts</h5>
+            <p>Get notified instantly when action is needed.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h5>Advanced Analytics</h5>
+            <p>Comprehensive reports and trend analysis.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h5>Mobile App</h5>
+            <p>Manage your apiary on the go with our mobile app.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-cloud"></i>
+            </div>
+            <h5>Cloud Storage</h5>
+            <p>Secure cloud storage for all your historical data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <!-- 
+    To switch between pricing modes:
+    - Add data-pricing="cards" to <body> to show pricing cards
+    - Add data-pricing="soon" to <body> (or remove attribute) to show coming soon
+    Default: coming soon
+  -->
+  <section class="section" id="pricing" data-pricing="soon">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Pricing</h2>
+          <p class="text-muted">Choose the plan that fits your needs</p>
+        </div>
+      </div>
+      
+      <!-- Coming Soon State (Default) -->
+      <div class="row" data-pricing-display="soon">
+        <div class="col-lg-6 mx-auto">
+          <div class="pricing-coming-soon">
+            <i class="bi bi-hourglass-split" style="font-size: 4rem; color: var(--sh-primary); margin-bottom: 1rem;"></i>
+            <h3>Pricing Coming Soon</h3>
+            <p class="text-muted mb-4">We're finalizing our pricing plans. Contact us to learn more about early access pricing.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Request Demo</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pricing Cards (Hidden by default) -->
+      <div class="row" data-pricing-display="cards" style="display: none;">
+        <div class="col-md-4 mb-4">
+          <div class="pricing-card">
+            <h4>Basic</h4>
+            <div class="price">$29<span class="price-period">/mo</span></div>
+            <p class="text-muted">Perfect for hobbyists</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Up to 5 devices</li>
+              <li><i class="bi bi-check"></i> Basic monitoring</li>
+              <li><i class="bi bi-check"></i> Email alerts</li>
+              <li><i class="bi bi-check"></i> Mobile app access</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-primary w-100">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="pricing-card featured">
+            <h4>Pro</h4>
+            <div class="price">$79<span class="price-period">/mo</span></div>
+            <p class="text-muted">For serious beekeepers</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Up to 25 devices</li>
+              <li><i class="bi bi-check"></i> Advanced analytics</li>
+              <li><i class="bi bi-check"></i> SMS & Email alerts</li>
+              <li><i class="bi bi-check"></i> Priority support</li>
+              <li><i class="bi bi-check"></i> Custom reports</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary w-100">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="pricing-card">
+            <h4>Enterprise</h4>
+            <div class="price">Custom</div>
+            <p class="text-muted">For commercial operations</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Unlimited devices</li>
+              <li><i class="bi bi-check"></i> Full API access</li>
+              <li><i class="bi bi-check"></i> Dedicated support</li>
+              <li><i class="bi bi-check"></i> Custom integrations</li>
+              <li><i class="bi bi-check"></i> On-premise options</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-primary w-100">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Frequently Asked Questions</h2>
+          <p class="text-muted">Everything you need to know</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How easy is it to install the devices?</span>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Installation is straightforward and takes just a few minutes per hive. Our devices are designed to be non-invasive and can be placed without disturbing the bees. We provide detailed instructions and video tutorials.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What kind of data do the devices collect?</span>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Our devices monitor temperature, humidity, hive weight, sound patterns, and bee activity. All data is transmitted wirelessly to our cloud platform for analysis and storage.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do I need internet access at my apiary?</span>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the devices require internet connectivity to transmit data. They support both Wi-Fi and cellular connectivity options depending on your location and needs.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I use SmartHoney with multiple apiaries?</span>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! SmartHoney supports multiple apiaries and hives. You can organize devices by apiary and compare performance across different locations.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What happens if a device fails?</span>
+              <i class="bi bi-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>If a device stops transmitting data, you'll receive an alert. We offer warranty coverage and replacement services. Our support team is available to help troubleshoot any issues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team & Mission -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Our Team & Mission</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <h3>Our Story</h3>
+          <p>SmartHoney was founded by a team of beekeepers and technologists who saw the need for better monitoring solutions in modern beekeeping. We combine deep domain expertise with cutting-edge technology to help beekeepers succeed.</p>
+          <p>Our mission is to make advanced monitoring accessible to beekeepers of all scales, from hobbyists to commercial operations. We believe that data-driven beekeeping leads to healthier hives, better yields, and a more sustainable future for beekeeping.</p>
+        </div>
+        <div class="col-lg-6">
+          <h3>Our Values</h3>
+          <div class="mission-value-card">
+            <h5><i class="bi bi-heart-fill text-primary me-2"></i>Sustainability</h5>
+            <p class="mb-0">We're committed to supporting sustainable beekeeping practices that protect bee populations and the environment.</p>
+          </div>
+          <div class="mission-value-card">
+            <h5><i class="bi bi-lightbulb-fill text-primary me-2"></i>Innovation</h5>
+            <p class="mb-0">We continuously innovate to provide the best tools and insights for modern beekeepers.</p>
+          </div>
+          <div class="mission-value-card">
+            <h5><i class="bi bi-people-fill text-primary me-2"></i>Community</h5>
+            <p class="mb-0">We build strong relationships with our customers and the beekeeping community.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">JD</div>
+            <h5>John Doe</h5>
+            <p class="text-muted">CEO & Co-Founder</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">JS</div>
+            <h5>Jane Smith</h5>
+            <p class="text-muted">CTO & Co-Founder</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="team-card">
+            <div class="team-avatar">MB</div>
+            <h5>Mike Brown</h5>
+            <p class="text-muted">Head of Product</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact" style="padding-bottom: 3rem;">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h2 class="mb-3">Get in Touch</h2>
+          <p class="text-muted">We'd love to hear from you</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="row mb-3">
+            <div class="col-md-6 mb-3">
+              <div class="feature-card h-100">
+                <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <h5>Email</h5>
+                <p class="text-muted mb-0">contact@smarthoney.com</p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="feature-card h-100">
+                <div class="feature-icon" style="width: 48px; height: 48px; font-size: 1.5rem;">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <h5>Phone</h5>
+                <p class="text-muted mb-0">+1 (555) 123-4567</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <h5 class="mb-3">Send us a message</h5>
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="contactName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="contactName" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="contactEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="contactEmail" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="contactSubject" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="public-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-section">
+          <h5 class="footer-title">SmartHoney</h5>
+          <p>Advanced beekeeping monitoring and management solutions for modern apiaries.</p>
+        </div>
+        <div class="col-md-2 footer-section">
+          <h5 class="footer-title">Product</h5>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 footer-section">
+          <h5 class="footer-title">Company</h5>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 footer-section">
+          <h5 class="footer-title">Legal</h5>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 footer-section">
+          <h5 class="footer-title">Follow Us</h5>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li><a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i> Twitter</a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.2);">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0" style="opacity: 0.8;">&copy; 2026 SmartHoney. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/js/public.js"></script>
+  
+  <!-- Pricing toggle CSS -->
+  <style>
+    [data-pricing="cards"] [data-pricing-display="cards"] {
+      display: flex !important;
+    }
+    [data-pricing="cards"] [data-pricing-display="soon"] {
+      display: none !important;
+    }
+    [data-pricing="soon"] [data-pricing-display="soon"],
+    :not([data-pricing]) [data-pricing-display="soon"] {
+      display: flex !important;
+    }
+    [data-pricing="soon"] [data-pricing-display="cards"],
+    :not([data-pricing]) [data-pricing-display="cards"] {
+      display: none !important;
+    }
+  </style>
+</body>
+</html>
+

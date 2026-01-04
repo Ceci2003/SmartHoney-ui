@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devices - SmartHoney</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="devices" class="app-wrapper">
+  <!-- Sidebar -->
+  <aside class="app-sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
+      <span>SmartHoney</span>
+    </a>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="dashboard.html" data-page="dashboard">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link" href="apiaries.html" data-page="apiaries">
+        <i class="bi bi-house-door"></i>
+        <span>Apiaries</span>
+      </a>
+      <a class="nav-link active" href="devices-grid.html" data-page="devices">
+        <i class="bi bi-device-hdd"></i>
+        <span>Devices</span>
+      </a>
+      <a class="nav-link" href="notifications.html" data-page="notifications">
+        <i class="bi bi-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <div class="nav-divider"></div>
+      <a class="nav-link" href="settings.html" data-page="settings">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+      <a class="nav-link" href="#" data-page="help">
+        <i class="bi bi-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="app-topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav aria-label="breadcrumb" class="breadcrumbs-container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Devices</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-link position-relative" type="button" aria-label="Notifications">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+          3
+        </span>
+      </button>
+      <div class="dropdown">
+        <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.875rem;">
+            JD
+          </div>
+          <span class="d-none d-md-inline">John Doe</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Devices</h1>
+        <p class="page-subtitle">Monitor and manage your hive devices</p>
+      </div>
+      <div class="page-actions">
+        <div class="btn-group" role="group">
+          <a href="devices-grid.html" class="btn btn-outline-primary">
+            <i class="bi bi-grid-3x3-gap"></i> Grid
+          </a>
+          <a href="devices-list.html" class="btn btn-primary active">
+            <i class="bi bi-list-ul"></i> List
+          </a>
+        </div>
+        <a href="device-add.html" class="btn btn-primary">
+          <i class="bi bi-plus-circle me-2"></i>Add Device
+        </a>
+      </div>
+    </div>
+
+    <!-- Status Legend -->
+    <div class="status-legend">
+      <div class="status-legend-item">
+        <div class="status-legend-color status-ok"></div>
+        <span>Healthy</span>
+      </div>
+      <div class="status-legend-item">
+        <div class="status-legend-color status-warn"></div>
+        <span>Warning</span>
+      </div>
+      <div class="status-legend-item">
+        <div class="status-legend-color status-crit"></div>
+        <span>Critical</span>
+      </div>
+      <div class="status-legend-item">
+        <div class="status-legend-color status-off"></div>
+        <span>Offline</span>
+      </div>
+      <div class="status-legend-item">
+        <div class="status-legend-color status-unknown"></div>
+        <span>Unknown</span>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search devices...">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>All Status</option>
+              <option>Healthy</option>
+              <option>Warning</option>
+              <option>Critical</option>
+              <option>Offline</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-select">
+              <option>All Apiaries</option>
+              <option>North Apiary</option>
+              <option>South Apiary</option>
+              <option>East Apiary</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <select class="form-select">
+              <option>Sort by Name</option>
+              <option>Sort by Status</option>
+              <option>Sort by Last Update</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Device List Table -->
+    <div class="card">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th style="width: 4px;"></th>
+                <th>Device</th>
+                <th>Apiary</th>
+                <th>Status</th>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>Last Update</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="device-card status-ok">
+                <td><div class="status-stripe status-ok"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-01</a></td>
+                <td>North Apiary</td>
+                <td><span class="badge badge-status-ok">Healthy</span></td>
+                <td>34.5°C</td>
+                <td>65%</td>
+                <td>2 minutes ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+              <tr class="device-card status-ok">
+                <td><div class="status-stripe status-ok"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-02</a></td>
+                <td>North Apiary</td>
+                <td><span class="badge badge-status-ok">Healthy</span></td>
+                <td>33.2°C</td>
+                <td>68%</td>
+                <td>3 minutes ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+              <tr class="device-card status-warn">
+                <td><div class="status-stripe status-warn"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-03</a></td>
+                <td>South Apiary</td>
+                <td><span class="badge badge-status-warn">Warning</span></td>
+                <td>35.1°C</td>
+                <td>62%</td>
+                <td>5 minutes ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+              <tr class="device-card status-ok">
+                <td><div class="status-stripe status-ok"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-04</a></td>
+                <td>South Apiary</td>
+                <td><span class="badge badge-status-ok">Healthy</span></td>
+                <td>32.8°C</td>
+                <td>70%</td>
+                <td>1 minute ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+              <tr class="device-card status-off">
+                <td><div class="status-stripe status-off"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-05</a></td>
+                <td>East Apiary</td>
+                <td><span class="badge badge-status-off">Offline</span></td>
+                <td>—</td>
+                <td>—</td>
+                <td>2 hours ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+              <tr class="device-card status-crit">
+                <td><div class="status-stripe status-crit"></div></td>
+                <td><a href="device-details.html" class="text-decoration-none fw-bold">Hive-06</a></td>
+                <td>West Apiary</td>
+                <td><span class="badge badge-status-crit">Critical</span></td>
+                <td>38.2°C</td>
+                <td>45%</td>
+                <td>10 minutes ago</td>
+                <td><a href="device-details.html" class="btn btn-sm btn-outline-primary">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
+

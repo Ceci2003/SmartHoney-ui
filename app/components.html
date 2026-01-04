@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components - SmartHoney</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body data-page="components" class="app-wrapper">
+  <!-- Sidebar -->
+  <aside class="app-sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
+      <span>SmartHoney</span>
+    </a>
+    <nav class="nav flex-column">
+      <a class="nav-link" href="dashboard.html" data-page="dashboard">
+        <i class="bi bi-speedometer2"></i>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link" href="apiaries.html" data-page="apiaries">
+        <i class="bi bi-house-door"></i>
+        <span>Apiaries</span>
+      </a>
+      <a class="nav-link" href="devices-grid.html" data-page="devices">
+        <i class="bi bi-device-hdd"></i>
+        <span>Devices</span>
+      </a>
+      <a class="nav-link" href="notifications.html" data-page="notifications">
+        <i class="bi bi-bell"></i>
+        <span>Notifications</span>
+      </a>
+      <div class="nav-divider"></div>
+      <a class="nav-link" href="settings.html" data-page="settings">
+        <i class="bi bi-gear"></i>
+        <span>Settings</span>
+      </a>
+      <a class="nav-link" href="#" data-page="help">
+        <i class="bi bi-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Topbar -->
+  <header class="app-topbar">
+    <div class="topbar-left">
+      <button class="sidebar-toggle" type="button" aria-label="Toggle sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav aria-label="breadcrumb" class="breadcrumbs-container">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Components</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-link position-relative" type="button" aria-label="Notifications">
+        <i class="bi bi-bell fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+          3
+        </span>
+      </button>
+      <div class="dropdown">
+        <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.875rem;">
+            JD
+          </div>
+          <span class="d-none d-md-inline">John Doe</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Profile</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">UI Components</h1>
+        <p class="page-subtitle">Showcase of all reusable components</p>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Buttons</h5>
+      </div>
+      <div class="card-body">
+        <h6>Primary Buttons</h6>
+        <div class="mb-3">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>With Icon</button>
+          <button class="btn btn-primary" disabled>Disabled</button>
+        </div>
+        <h6>Secondary Buttons</h6>
+        <div class="mb-3">
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-outline-primary">Outline Primary</button>
+          <button class="btn btn-outline-secondary">Outline Secondary</button>
+        </div>
+        <h6>Icon Buttons</h6>
+        <div class="mb-3">
+          <button class="btn btn-link"><i class="bi bi-gear"></i></button>
+          <button class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil"></i></button>
+          <button class="btn btn-lg btn-primary"><i class="bi bi-check-circle"></i></button>
+        </div>
+        <h6>Sizes</h6>
+        <div>
+          <button class="btn btn-primary btn-sm">Small</button>
+          <button class="btn btn-primary">Default</button>
+          <button class="btn btn-primary btn-lg">Large</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Cards</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="stat-card">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <p class="stat-value">24</p>
+                  <p class="stat-label">Active Devices</p>
+                </div>
+                <div class="stat-icon">
+                  <i class="bi bi-device-hdd"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card device-card status-ok">
+              <div class="card-body">
+                <h5 class="card-title">Device Card</h5>
+                <p class="text-muted small">Status: Healthy</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">Info Card</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Standard information card with header and body.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Badges & Status</h5>
+      </div>
+      <div class="card-body">
+        <h6>Status Badges</h6>
+        <div class="mb-3">
+          <span class="badge badge-status-ok">Healthy</span>
+          <span class="badge badge-status-warn">Warning</span>
+          <span class="badge badge-status-crit">Critical</span>
+          <span class="badge badge-status-off">Offline</span>
+          <span class="badge badge-status-unknown">Unknown</span>
+        </div>
+        <h6>Standard Badges</h6>
+        <div class="mb-3">
+          <span class="badge bg-primary">Primary</span>
+          <span class="badge bg-secondary">Secondary</span>
+          <span class="badge bg-success">Success</span>
+          <span class="badge bg-danger">Danger</span>
+          <span class="badge bg-warning text-dark">Warning</span>
+          <span class="badge bg-info">Info</span>
+        </div>
+        <h6>Pill Badges</h6>
+        <div>
+          <span class="badge rounded-pill bg-primary">Pill</span>
+          <span class="badge rounded-pill bg-secondary">Pill</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alerts -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Alerts</h5>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-success" role="alert">
+          <i class="bi bi-check-circle me-2"></i>Success alert with icon
+        </div>
+        <div class="alert alert-danger" role="alert">
+          <i class="bi bi-exclamation-triangle me-2"></i>Danger alert with icon
+        </div>
+        <div class="alert alert-warning" role="alert">
+          <i class="bi bi-exclamation-circle me-2"></i>Warning alert with icon
+        </div>
+        <div class="alert alert-info" role="alert">
+          <i class="bi bi-info-circle me-2"></i>Info alert with icon
+        </div>
+      </div>
+    </div>
+
+    <!-- Toasts -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Toasts</h5>
+      </div>
+      <div class="card-body">
+        <p class="text-muted mb-3">Click the buttons below to trigger toasts:</p>
+        <div class="mb-3">
+          <button class="btn btn-primary" data-toast-trigger="toastSuccess">Success Toast</button>
+          <button class="btn btn-danger" data-toast-trigger="toastError">Error Toast</button>
+          <button class="btn btn-warning" data-toast-trigger="toastWarning">Warning Toast</button>
+          <button class="btn btn-info" data-toast-trigger="toastInfo">Info Toast</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+      <div id="toastSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-check-circle text-success me-2"></i>
+          <strong class="me-auto">Success</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">Operation completed successfully!</div>
+      </div>
+      <div id="toastError" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-exclamation-triangle text-danger me-2"></i>
+          <strong class="me-auto">Error</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">An error occurred. Please try again.</div>
+      </div>
+      <div id="toastWarning" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-exclamation-circle text-warning me-2"></i>
+          <strong class="me-auto">Warning</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">Please review this warning.</div>
+      </div>
+      <div id="toastInfo" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-info-circle text-info me-2"></i>
+          <strong class="me-auto">Info</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">Here's some helpful information.</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Tabs</h5>
+      </div>
+      <div class="card-body">
+        <ul class="nav nav-tabs mb-3" id="componentTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">
+              Tab 1
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">
+              Tab 2
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">
+              Tab 3
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="componentTabsContent">
+          <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+            Content for Tab 1
+          </div>
+          <div class="tab-pane fade" id="tab2" role="tabpanel">
+            Content for Tab 2
+          </div>
+          <div class="tab-pane fade" id="tab3" role="tabpanel">
+            Content for Tab 3
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tables -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Tables</h5>
+      </div>
+      <div class="card-body">
+        <h6>Standard Table</h6>
+        <div class="table-responsive mb-4">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Device</th>
+                <th>Status</th>
+                <th>Temperature</th>
+                <th>Last Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hive-01</td>
+                <td><span class="badge bg-success">Healthy</span></td>
+                <td>34.5°C</td>
+                <td>2 min ago</td>
+              </tr>
+              <tr>
+                <td>Hive-02</td>
+                <td><span class="badge bg-warning">Warning</span></td>
+                <td>35.1°C</td>
+                <td>5 min ago</td>
+              </tr>
+              <tr>
+                <td>Hive-03</td>
+                <td><span class="badge bg-danger">Critical</span></td>
+                <td>38.2°C</td>
+                <td>10 min ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h6>Compact Table</h6>
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Device A</td>
+                <td><span class="badge bg-success">Active</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Device B</td>
+                <td><span class="badge bg-secondary">Inactive</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forms -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Forms</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="exampleInput" class="form-label">Text Input</label>
+              <input type="text" class="form-control" id="exampleInput" placeholder="Enter text">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="exampleSelect" class="form-label">Select</label>
+              <select class="form-select" id="exampleSelect">
+                <option selected>Choose option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleTextarea" class="form-label">Textarea</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Enter text"></textarea>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="Input group">
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="exampleCheck">
+              <label class="form-check-label" for="exampleCheck">Checkbox</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="exampleSwitch">
+              <label class="form-check-label" for="exampleSwitch">Switch</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Validation States</label>
+            <input type="text" class="form-control is-valid" placeholder="Valid input">
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control is-invalid" placeholder="Invalid input">
+            <div class="invalid-feedback">Please provide a valid value.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Modal</h5>
+      </div>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Open Modal
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirmation Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to perform this action?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Breadcrumbs</h5>
+      </div>
+      <div class="card-body">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Devices</a></li>
+            <li class="breadcrumb-item active">Device Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Empty State</h5>
+      </div>
+      <div class="card-body text-center py-5">
+        <i class="bi bi-inbox" style="font-size: 4rem; color: var(--sh-muted); opacity: 0.5;"></i>
+        <h4 class="mt-3">No Data Available</h4>
+        <p class="text-muted">There are no items to display at this time.</p>
+        <button class="btn btn-primary">Add Item</button>
+      </div>
+    </div>
+
+    <!-- Status Legend -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Status Legend</h5>
+      </div>
+      <div class="card-body">
+        <div class="status-legend">
+          <div class="status-legend-item">
+            <div class="status-legend-color status-ok"></div>
+            <span>Healthy - Device operating normally</span>
+          </div>
+          <div class="status-legend-item">
+            <div class="status-legend-color status-warn"></div>
+            <span>Warning - Attention required</span>
+          </div>
+          <div class="status-legend-item">
+            <div class="status-legend-color status-crit"></div>
+            <span>Critical - Immediate action needed</span>
+          </div>
+          <div class="status-legend-item">
+            <div class="status-legend-color status-off"></div>
+            <span>Offline - Device not responding</span>
+          </div>
+          <div class="status-legend-item">
+            <div class="status-legend-color status-unknown"></div>
+            <span>Unknown - Status cannot be determined</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Placeholder -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Chart Placeholder</h5>
+      </div>
+      <div class="card-body">
+        <div class="chart-placeholder">
+          <i class="bi bi-graph-up"></i>
+          <p>Chart visualization will be displayed here</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Item -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h5 class="mb-0">Notification Item</h5>
+      </div>
+      <div class="card-body">
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="badge bg-warning me-2">Warning</span>
+                <strong>Temperature Alert</strong>
+                <p class="mb-0 text-muted small">Device Hive-01: Temperature above threshold</p>
+              </div>
+              <small class="text-muted">5 min ago</small>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <span class="badge bg-danger me-2">Critical</span>
+                <strong>Device Offline</strong>
+                <p class="mb-0 text-muted small">Device Hive-05: No data received</p>
+              </div>
+              <small class="text-muted">1 hour ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
+
