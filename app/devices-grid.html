@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devices - SmartHoney</title>
+  <title>Устройства - SmartHoney</title>
   
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,28 +23,28 @@
     <nav class="nav flex-column">
       <a class="nav-link" href="dashboard.html" data-page="dashboard">
         <i class="bi bi-speedometer2"></i>
-        <span>Dashboard</span>
+        <span>Табло</span>
       </a>
       <a class="nav-link" href="apiaries.html" data-page="apiaries">
         <i class="bi bi-house-door"></i>
-        <span>Apiaries</span>
+        <span>Пчелини</span>
       </a>
       <a class="nav-link active" href="devices-grid.html" data-page="devices">
         <i class="bi bi-device-hdd"></i>
-        <span>Devices</span>
+        <span>Устройства</span>
       </a>
       <a class="nav-link" href="notifications.html" data-page="notifications">
         <i class="bi bi-bell"></i>
-        <span>Notifications</span>
+        <span>Известия</span>
       </a>
       <div class="nav-divider"></div>
       <a class="nav-link" href="settings.html" data-page="settings">
         <i class="bi bi-gear"></i>
-        <span>Settings</span>
+        <span>Настройки</span>
       </a>
       <a class="nav-link" href="#" data-page="help">
         <i class="bi bi-question-circle"></i>
-        <span>Help</span>
+        <span>Помощ</span>
       </a>
     </nav>
   </aside>
@@ -57,8 +57,8 @@
       </button>
       <nav aria-label="breadcrumb" class="breadcrumbs-container">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
-          <li class="breadcrumb-item active">Devices</li>
+          <li class="breadcrumb-item"><a href="dashboard.html">Начало</a></li>
+          <li class="breadcrumb-item active">Устройства</li>
         </ol>
       </nav>
     </div>
@@ -73,8 +73,8 @@
         </button>
         <div class="dropdown-menu dropdown-menu-end topbar-notifications" aria-labelledby="notificationsDropdown">
           <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
-            <h6 class="mb-0">Notifications</h6>
-            <a href="notifications-preview.html" class="text-decoration-none small">View all</a>
+            <h6 class="mb-0">Известия</h6>
+            <a href="notifications-preview.html" class="text-decoration-none small">Виж всички</a>
           </div>
           <div class="topbar-notifications-list">
             <a href="notifications-preview.html" class="notification-item">
@@ -82,10 +82,10 @@
                 <div class="notification-dot bg-danger"></div>
                 <div class="flex-grow-1">
                   <div class="d-flex align-items-center gap-2 mb-1">
-                    <strong class="small">Device Offline</strong>
+                    <strong class="small">Устройство офлайн</strong>
                   </div>
-                  <p class="mb-0 text-muted small">Hive-05: No data received for 2 hours</p>
-                  <small class="text-muted">1 hour ago</small>
+                  <p class="mb-0 text-muted small">Кошер-05: Няма получени данни от 2 часа</p>
+                  <small class="text-muted">преди 1 час</small>
                 </div>
               </div>
             </a>
@@ -94,10 +94,10 @@
                 <div class="notification-dot bg-warning"></div>
                 <div class="flex-grow-1">
                   <div class="d-flex align-items-center gap-2 mb-1">
-                    <strong class="small">Temperature Alert</strong>
+                    <strong class="small">Аларма за температура</strong>
                   </div>
-                  <p class="mb-0 text-muted small">Hive-01: Temperature above threshold</p>
-                  <small class="text-muted">2 hours ago</small>
+                  <p class="mb-0 text-muted small">Кошер-01: Температура над прага</p>
+                  <small class="text-muted">преди 2 часа</small>
                 </div>
               </div>
             </a>
@@ -106,10 +106,10 @@
                 <div class="notification-dot bg-warning"></div>
                 <div class="flex-grow-1">
                   <div class="d-flex align-items-center gap-2 mb-1">
-                    <strong class="small">Humidity Alert</strong>
+                    <strong class="small">Аларма за влажност</strong>
                   </div>
-                  <p class="mb-0 text-muted small">Hive-03: Humidity below normal range</p>
-                  <small class="text-muted">3 hours ago</small>
+                  <p class="mb-0 text-muted small">Кошер-03: Влажност под нормалния диапазон</p>
+                  <small class="text-muted">преди 3 часа</small>
                 </div>
               </div>
             </a>
@@ -118,10 +118,10 @@
                 <div class="notification-dot bg-info"></div>
                 <div class="flex-grow-1">
                   <div class="d-flex align-items-center gap-2 mb-1">
-                    <strong class="small">Data Received</strong>
+                    <strong class="small">Получени данни</strong>
                   </div>
-                  <p class="mb-0 text-muted small">All devices reporting normally</p>
-                  <small class="text-muted">2 hours ago</small>
+                  <p class="mb-0 text-muted small">Всички устройства докладват нормално</p>
+                  <small class="text-muted">преди 2 часа</small>
                 </div>
               </div>
             </a>
@@ -130,10 +130,10 @@
                 <div class="notification-dot bg-success"></div>
                 <div class="flex-grow-1">
                   <div class="d-flex align-items-center gap-2 mb-1">
-                    <strong class="small">Device Reconnected</strong>
+                    <strong class="small">Устройство преподключено</strong>
                   </div>
-                  <p class="mb-0 text-muted small">Hive-04: Successfully reconnected</p>
-                  <small class="text-muted">1 day ago</small>
+                  <p class="mb-0 text-muted small">Кошер-04: Успешно преподключено</p>
+                  <small class="text-muted">преди 1 ден</small>
                 </div>
               </div>
             </a>
@@ -142,11 +142,11 @@
           <!--
           <div class="text-center py-4">
             <i class="bi bi-bell-slash text-muted" style="font-size: 2rem; opacity: 0.5;"></i>
-            <p class="text-muted small mb-0 mt-2">No notifications yet</p>
+            <p class="text-muted small mb-0 mt-2">Все още няма известия</p>
           </div>
           -->
           <div class="border-top p-2">
-            <a href="notifications-preview.html" class="btn btn-primary btn-sm w-100">Open Notifications</a>
+            <a href="notifications-preview.html" class="btn btn-primary btn-sm w-100">Отвори известия</a>
           </div>
         </div>
       </div>
@@ -158,10 +158,10 @@
           <span class="d-none d-md-inline">John Doe</span>
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Profile</a></li>
-          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
+          <li><a class="dropdown-item" href="profile-view.html"><i class="bi bi-person me-2"></i>Профил</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>Настройки</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Sign out</a></li>
+          <li><a class="dropdown-item" href="../auth/login.html"><i class="bi bi-box-arrow-right me-2"></i>Изход</a></li>
         </ul>
       </div>
     </div>
@@ -171,20 +171,20 @@
   <main class="app-content">
     <div class="page-header">
       <div>
-        <h1 class="page-title">Devices</h1>
-        <p class="page-subtitle">Monitor and manage your hive devices</p>
+        <h1 class="page-title">Устройства</h1>
+        <p class="page-subtitle">Мониторирайте и управлявайте устройствата си за кошери</p>
       </div>
       <div class="page-actions">
         <div class="btn-group" role="group">
           <a href="devices-grid.html" class="btn btn-primary active">
-            <i class="bi bi-grid-3x3-gap"></i> Grid
+            <i class="bi bi-grid-3x3-gap"></i> Мрежа
           </a>
           <a href="devices-list.html" class="btn btn-outline-primary">
-            <i class="bi bi-list-ul"></i> List
+            <i class="bi bi-list-ul"></i> Списък
           </a>
         </div>
         <a href="device-add.html" class="btn btn-primary">
-          <i class="bi bi-plus-circle me-2"></i>Add Device
+          <i class="bi bi-plus-circle me-2"></i>Добави устройство
         </a>
       </div>
     </div>
@@ -193,23 +193,23 @@
     <div class="status-legend">
       <div class="status-legend-item">
         <div class="status-legend-color status-ok"></div>
-        <span>Healthy</span>
+        <span>Нормално</span>
       </div>
       <div class="status-legend-item">
         <div class="status-legend-color status-warn"></div>
-        <span>Warning</span>
+        <span>Предупреждение</span>
       </div>
       <div class="status-legend-item">
         <div class="status-legend-color status-crit"></div>
-        <span>Critical</span>
+        <span>Критично</span>
       </div>
       <div class="status-legend-item">
         <div class="status-legend-color status-off"></div>
-        <span>Offline</span>
+        <span>Офлайн</span>
       </div>
       <div class="status-legend-item">
         <div class="status-legend-color status-unknown"></div>
-        <span>Unknown</span>
+        <span>Неизвестно</span>
       </div>
     </div>
 
@@ -220,31 +220,31 @@
           <div class="col-md-4">
             <div class="input-group">
               <span class="input-group-text"><i class="bi bi-search"></i></span>
-              <input type="text" class="form-control" placeholder="Search devices...">
+              <input type="text" class="form-control" placeholder="Търсене на устройства...">
             </div>
           </div>
           <div class="col-md-3">
             <select class="form-select">
-              <option>All Status</option>
-              <option>Healthy</option>
-              <option>Warning</option>
-              <option>Critical</option>
-              <option>Offline</option>
+              <option>Всички статуси</option>
+              <option>Нормално</option>
+              <option>Предупреждение</option>
+              <option>Критично</option>
+              <option>Офлайн</option>
             </select>
           </div>
           <div class="col-md-3">
             <select class="form-select">
-              <option>All Apiaries</option>
-              <option>North Apiary</option>
-              <option>South Apiary</option>
-              <option>East Apiary</option>
+              <option>Всички пчелини</option>
+              <option>Северна пчелина</option>
+              <option>Южна пчелина</option>
+              <option>Източна пчелина</option>
             </select>
           </div>
           <div class="col-md-2">
             <select class="form-select">
-              <option>Sort by Name</option>
-              <option>Sort by Status</option>
-              <option>Sort by Last Update</option>
+              <option>Сортирай по име</option>
+              <option>Сортирай по статус</option>
+              <option>Сортирай по последна актуализация</option>
             </select>
           </div>
         </div>
@@ -257,25 +257,25 @@
         <div class="card device-card status-ok h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-01</h5>
-              <span class="badge badge-status-ok">Healthy</span>
+              <h5 class="card-title mb-0">Кошер-01</h5>
+              <span class="badge badge-status-ok">Нормално</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>North Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Северна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>34.5°C</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>65%</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">2 min ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 2 мин</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
@@ -283,25 +283,25 @@
         <div class="card device-card status-ok h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-02</h5>
-              <span class="badge badge-status-ok">Healthy</span>
+              <h5 class="card-title mb-0">Кошер-02</h5>
+              <span class="badge badge-status-ok">Нормално</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>North Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Северна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>33.2°C</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>68%</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">3 min ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 3 мин</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
@@ -309,25 +309,25 @@
         <div class="card device-card status-warn h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-03</h5>
-              <span class="badge badge-status-warn">Warning</span>
+              <h5 class="card-title mb-0">Кошер-03</h5>
+              <span class="badge badge-status-warn">Предупреждение</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>South Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Южна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>35.1°C</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>62%</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">5 min ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 5 мин</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
@@ -335,25 +335,25 @@
         <div class="card device-card status-ok h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-04</h5>
-              <span class="badge badge-status-ok">Healthy</span>
+              <h5 class="card-title mb-0">Кошер-04</h5>
+              <span class="badge badge-status-ok">Нормално</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>South Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Южна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>32.8°C</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>70%</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">1 min ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 1 мин</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
@@ -361,25 +361,25 @@
         <div class="card device-card status-off h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-05</h5>
-              <span class="badge badge-status-off">Offline</span>
+              <h5 class="card-title mb-0">Кошер-05</h5>
+              <span class="badge badge-status-off">Офлайн</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>East Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Източна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>—</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>—</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">2 hours ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 2 часа</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
@@ -387,25 +387,25 @@
         <div class="card device-card status-crit h-100">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="card-title mb-0">Hive-06</h5>
-              <span class="badge badge-status-crit">Critical</span>
+              <h5 class="card-title mb-0">Кошер-06</h5>
+              <span class="badge badge-status-crit">Критично</span>
             </div>
-            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>West Apiary</p>
+            <p class="text-muted small mb-2"><i class="bi bi-house-door me-1"></i>Западна пчелина</p>
             <div class="mb-3">
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Temperature</span>
+                <span class="small">Температура</span>
                 <strong>38.2°C</strong>
               </div>
               <div class="d-flex justify-content-between mb-1">
-                <span class="small">Humidity</span>
+                <span class="small">Влажност</span>
                 <strong>45%</strong>
               </div>
               <div class="d-flex justify-content-between">
-                <span class="small">Last Update</span>
-                <span class="small text-muted">10 min ago</span>
+                <span class="small">Последна актуализация</span>
+                <span class="small text-muted">преди 10 мин</span>
               </div>
             </div>
-            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">View Details</a>
+            <a href="device-details.html" class="btn btn-sm btn-outline-primary w-100">Виж детайли</a>
           </div>
         </div>
       </div>
