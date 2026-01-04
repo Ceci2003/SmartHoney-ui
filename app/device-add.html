@@ -19,7 +19,6 @@
   <aside class="app-sidebar">
     <a href="dashboard.html" class="sidebar-brand">
       <img src="../assets/img/logo.svg" alt="SmartHoney Logo">
-      <span>SmartHoney</span>
     </a>
     <nav class="nav flex-column">
       <a class="nav-link" href="dashboard.html" data-page="dashboard">
@@ -65,12 +64,93 @@
       </nav>
     </div>
     <div class="topbar-right">
-      <button class="btn btn-link position-relative" type="button" aria-label="Notifications">
-        <i class="bi bi-bell fs-5"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
-          3
-        </span>
-      </button>
+      <!-- Notifications Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-link position-relative" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+          <i class="bi bi-bell fs-5"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+            3
+          </span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end topbar-notifications" aria-labelledby="notificationsDropdown">
+          <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <h6 class="mb-0">Notifications</h6>
+            <a href="notifications.html" class="text-decoration-none small">View all</a>
+          </div>
+          <div class="topbar-notifications-list">
+            <a href="notifications.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-danger"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Device Offline</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-05: No data received for 2 hours</p>
+                  <small class="text-muted">1 hour ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-warning"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Temperature Alert</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-01: Temperature above threshold</p>
+                  <small class="text-muted">2 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-warning"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Humidity Alert</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-03: Humidity below normal range</p>
+                  <small class="text-muted">3 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-info"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Data Received</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">All devices reporting normally</p>
+                  <small class="text-muted">2 hours ago</small>
+                </div>
+              </div>
+            </a>
+            <a href="notifications.html" class="notification-item">
+              <div class="d-flex align-items-start gap-2">
+                <div class="notification-dot bg-success"></div>
+                <div class="flex-grow-1">
+                  <div class="d-flex align-items-center gap-2 mb-1">
+                    <strong class="small">Device Reconnected</strong>
+                  </div>
+                  <p class="mb-0 text-muted small">Hive-04: Successfully reconnected</p>
+                  <small class="text-muted">1 day ago</small>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- Empty State (commented out - swap in when no notifications) -->
+          <!--
+          <div class="text-center py-4">
+            <i class="bi bi-bell-slash text-muted" style="font-size: 2rem; opacity: 0.5;"></i>
+            <p class="text-muted small mb-0 mt-2">No notifications yet</p>
+          </div>
+          -->
+          <div class="border-top p-2">
+            <a href="notifications.html" class="btn btn-primary btn-sm w-100">Open Notifications</a>
+          </div>
+        </div>
+      </div>
       <div class="dropdown">
         <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 0.875rem;">
